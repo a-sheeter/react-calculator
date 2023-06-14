@@ -1,0 +1,159 @@
+:root {
+    --main-purple: #741976;
+    --brighter-purple: #d517d8ac;
+    --dark-purple: #230d23;
+    --main-blue: #20476c;
+    --text-blue: #72bcd4;
+    --hot-pink: #FF0D86;
+}
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.dark-purple-container {
+    background-color: var(--dark-purple);
+    width: 900px;
+    height: 900px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.opaque-circle {
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 2px 4px rgba(255, 255, 255, 0.3);
+    width: 80%;
+    height: 80%;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator-container {
+    background-color: black;
+    box-shadow: 25px 15px 60px 5px var(--main-blue);
+    width: 50%;
+    height: 90%;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pink-blur {
+    background-color: var(--brighter-purple);
+    filter: blur(25px); 
+    position: absolute;  
+    width: 200px;
+    height: 100px; 
+    border-radius: 100%;
+}
+
+.blur-right {
+    transform: rotate(6deg);
+    right: -45px;
+    top: -40px;
+}
+
+.blur-left {
+    bottom: -60px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+/*screen*/
+.calc-screen {
+    height: 30%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    row-gap: 15px;
+}
+
+.current-calculation {
+    height: 20px;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    color: darkgray;
+}
+
+.current-total {
+    color: white;
+    font-size: 2.5rem;
+}
+
+/*buttons*/
+.calc-button-container {
+    color: white;
+    text-align: center;
+    height: 60%;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+    z-index: 9999;
+}
+
+/*clear all button styling*/
+button {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+/*set button styling*/
+.btn {
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: box-shadow .4s ease;
+}
+
+.btn:hover {
+    box-shadow: 0 0 10px .2px rgba(255, 255, 255, 0.459);
+}
+
+.purple-btn {
+    background-color: var(--brighter-purple);
+    transition: box-shadow .4s ease;
+}
+
+.purple-btn:hover {
+    box-shadow: 0 0 10px .2px var(--brighter-purple);
+}
+
+.blue-num {
+    color: rgb(19, 121, 255);
+}
+
+/*zero button*/
+.span-two-cols {
+    grid-column: 1 / 3;
+}
+
+/*addition button*/
+.span-two-rows {
+    grid-row: 3 / 5;
+    grid-column: 4;
+}
+
+
