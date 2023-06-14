@@ -6,8 +6,8 @@ To deploy:
 Unzip the node_modules.zip
 
 In VSCode:
->> npm i
->> npm run dev
+> npm i
+> npm run dev
 
 **You will need Vite installed
 
